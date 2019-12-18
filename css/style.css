@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
+
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #7e7f84;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'Lato', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #f45a40;
+	text-decoration: underline;
+}
+a:hover {
+	color: #f45a40;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #f45a40;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+/*HEADER*/
+
+.center-block-main {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+header {
+	background: rgba(7,7,7,0.3);
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+}
+
+	.header-top {
+		padding: 15px 0 25px 0;
+	}	
+		.logo {
+			float: left;
+			margin-left: 15px;
+		}
+		.menu {
+			float: right;
+			font-family: 'Open Sans', sans-serif;
+			margin-top: 25px;
+		}
+			.menu li {
+				float: left;
+				font-size: 0.875em;
+				margin-bottom: 10px;
+			}
+			.menu li a{
+				text-transform: uppercase;
+				color: #fff;
+				text-decoration: none;
+				margin-right: 30px;
+				
+				}
+			.menu li a:hover {
+				color: #4bcaff;
+			}	
+
+/*END HEADER*/
+
+/*SLIDER*/
+
+.my-slider {
+}
+	.slide-text-wraper {
+		position: absolute;
+		top: 35%;
+		left: 44%;
+		max-width: 670px;
+	}
+		.slide-text-wraper span {
+			font-weight: 700;
+		}
+
+	.my-slider ul li {
+		position: relative;
+		color: #fff;
+		border-bottom: 4px solid #4bcaff;
+		font-size: 0;
+	}
+	.my-slider ul li h2 {
+		font-size: 48px;
+		font-weight: 300;
+		line-height: 1.1;
+		margin-bottom: 30px;
+	}
+	.my-slider ul li p {
+		font-size: 18px;
+		font-weight: 300;
+	}
+	.my-slider img {
+		width: 100%;
+	}
+	a.download-btn {
+		color: #fff;
+		border: 2px solid #fff;
+		padding: 22px 50px;
+		display: inline-block;
+		border-radius: 10px;
+		text-decoration: none;
+		font-weight: 700;
+		margin-top: 30px;
+	}
+		a:hover.download-btn {
+			color: #4bcaff;
+			border: 2px solid #4bcaff;
+		}
+
+	.unslider-nav {
+		 max-width: 1170px;
+		 margin: -19px auto 0 auto;
+		 position: relative;
+		 top: -20px;
+	}
+
+/*END SLIDER*/
+
+/*BLOCK3*/
+
+.block3-section {
+	background: #f9f9f9;
+	border-bottom: 1px solid #e7e7e7;
+	padding: 50px 0 50px 0;
+}
+	.block3-section>h2 {
+		font-size: 2.25em;
+		font-weight: 700;
+		color: #414042;
+		text-align: center;
+	}
+	.block3-section>h3 {
+		font-size: 1.25em;
+		font-weight: 300;
+		color: #414042;
+		text-align: center;
+		margin-bottom: 70px;
+	}
+
+.block3-main {
+	margin-bottom: 60px;
+	text-align:  center;
+}
+	.block3-main article {
+		float: left;
+		width: 30%;
+		margin-left: 5%;
+	}
+	.block3-main article:first-child {
+		margin-left: 0;
+	}
+	.block3-main article img {
+		display: block;
+		margin: 0 auto 20px auto;
+
+	}
+	.block3-main article h2 {
+		font-size: 1em;
+		font-weight: 700;
+		margin-bottom: 20px;
+		
+		text-transform: uppercase;
+	}
+	.block3-main article h2 a {
+		color: #414042;
+		text-decoration: none;
+	}
+	.block3-main article p {
+		font-size: 0.8125em;
+		line-height: 22px;
+	}
+/*END BLOCK3*/
+
+/*BLOCK4*/
+
+.block4-section {
+	margin-bottom: 60px;
+	padding: 50px 0 50px 0;
+}
+	.block4-section>h2 {
+		font-size: 2.25em;
+		font-weight: 700;
+		color: #414042;
+		text-align: center;
+	}
+	.block4-section>h3 {
+		font-size: 1.25em;
+		font-weight: 300;
+		color: #414042;
+		text-align: center;
+		margin-bottom: 70px;
+	}
+	.block4-main article {
+		width: 23%;
+		margin-left: 2.6%;
+		float: left;
+	}
+		.block4-main article:first-child {
+			margin-left: 0;
+		}
+	.block4-main article img {
+		display: block;
+		margin: 0 auto;
+		border-radius: 10px;
+	}
+	.block4-main-content {
+		padding: 20px;
+		text-align: center;
+	}
+
+	.block4-main-content p {
+		font-size: 0.875em;
+		line-height: 22px;
+		margin-bottom: 15px;
+	}
+
+/*END BLOCK4*/
+
+/*VIDEO*/
+
+.video-section {
+	background: url(../images/bg-video.jpg) no-repeat center top;
+	padding: 150px 0;
+	background-size: cover;
+}
+.video-main-text {
+	text-align: center;
+	color: #fff;
+}
+	.video-main-text img {
+		cursor: pointer;
+		margin-bottom: 30px;
+	}
+	.video-main-text h2 {
+		font-size: 48px;
+		font-weight: 300;
+		line-height: 1.1;
+		margin-bottom: 30px;
+	}
+	.video-main-text span {
+		 font-weight: 700;
+	}
+	.video-main-text p {
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+/*END VIDEO*/
+
+/*SUBSCRIBE*/
+
+.subscribe {
+	background: #414042;
+	color: #fff;
+	padding: 30px 0;
+	text-align: center;
+}
+	.subscribe h2 {
+		font-size: 3.4375em;
+		font-weight: 700;
+	}
+
+	a.download-btn-now {
+		color: #414042;
+		background: #4bcaff;
+		padding: 22px 50px;
+		display: inline-block;
+		border-radius: 10px;
+		text-decoration: none;
+		font-weight: 700;
+		margin-top: 30px;
+		box-shadow: 0 4px #277697;
+	}
+		a:hover.download-btn-now {
+			color: #fff;
+			box-shadow: none;
+		}
+
+
+/*END SUBSCRIBE*/
+
+
+/*CONTACT SECTION*/
+.contact-section{
+	position: relative;
+	height: 680px;
+}
+
+.contact-section iframe {
+	width: 100%;
+	height: 680px;
+}
+.contact-block {
+	position: absolute;
+	bottom: 100px;
+	width: 320px;
+	left: 50%;
+	margin-left: -160px;
+	background: rgba(75, 202, 255, 0.7);
+	border-radius: 10px;
+	padding: 30px 30px 15px 30px;
+	box-sizing: border-box;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-block  h2 {
+	text-align: center;
+	font-size: 2.25em;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 25px;
+}
+
+.ftr-mail, .ftr-text {
+	box-sizing: border-box;
+	border: none;
+	border-radius: 5px;
+	width: 100%;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	font-size: 0.875em;
+	text-align: center;
+}
+	.ftr-text {
+		height: 80px;
+	}
+	.ftr-mail::placeholder, .ftr-text::placeholder {
+		color: #d3d3d3;
+	}
+
+.ftr-submit {
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	padding: 10px 80px;
+	background: #414042;
+	color: #72b3cc;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	box-shadow: 0 4px #313032;
+}
+
+.ftr-submit:hover {
+	color: #fff;
+	box-shadow: none;
+}
+
+/*END CONTACT SECTION*/
+/*FOOTER*/
+
+.ftr {
+	background: #414042;
+	padding: 40px 0;
+}
+	.ftr p {
+		margin-left: 15px;
+		color: rgba(254, 254, 254, 0.25);
+	}
+
+
+/*END FOOTER*/
+
+@media screen and (max-width: 1000px) {
+	.my-slider ul li h2 {
+		font-size: 36px;
+	}
+	.my-slider ul li p {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.block4-main article {
+		width: 45%;
+		margin: 0 2.5% 30px 2.5%;
+	}
+		.block4-main article:first-child {
+			margin: 0 2.5% 30px 2.5%;
+		}
+	a.download-btn {
+		padding: 12px 50px;
+		font-size: 14px;
+		margin-top: 30px;
+	}
+}
+
+
+@media screen and (max-width: 850px) {
+	header {
+		background: rgba(7,7,7,0.8);
+		position: relative;
+		z-index: 2;
+		width: 100%;
+	}
+	.slide-text-wraper {
+		position: absolute;
+		top: 20%;
+		left: 44%;
+		max-width: 670px;
+	}
+}
+
+@media screen and (max-width: 740px) {
+	.my-slider ul li h2 {
+		font-size: 24px;
+	}
+	.my-slider ul li p {
+		font-size: 14px;
+	}
+	a.download-btn {
+		padding: 10px 40px;
+		font-size: 12px;
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.slide-text-wraper {
+		position: absolute;
+		top: 10%;
+		left: 44%;
+		max-width: 670px;
+	}
+	.my-slider ul li h2 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	.block3-main article {
+		width: 95%;
+		margin:0 2.5% 20px 2.5%;
+		float: none;
+	}
+	.logo  {
+		float: none;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.block3-main article:first-child {
+		margin:0 2.5% 20px 2.5%;
+	}
+	.about article {
+		float: none;
+		width: 95%;
+		margin:0 2.5% 20px 2.5%;
+	}
+	.video-main-text{
+		float: none;
+		width: 95%;
+		margin:0 2.5% 20px 2.5%;
+	}
+	.subscribe h2 {
+		font-size: 36px;
+		font-weight: 700;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.slide-text-wraper {
+		position: absolute;
+		top: 5%;
+		max-width: 670px;
+	}
+	.my-slider ul li h2 {
+		font-size: 18px;
+	}
+	.my-slider ul li p {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	a.download-btn {
+		padding: 5px 20px;
+		font-size: 10px;
+		margin-top: 10px;
+		margin-left: -420px;
+	}
+
+	.unslider-nav ol li {
+	  width: 5px;
+	  height: 5px;
+	}
+	.unslider-nav ol li.unslider-active {
+	  width: 5px;
+	  height: 5px;
+	}
+	.block4-main article {
+		width: 95%;
+		margin: 0 2.5% -20px 2.5%;
+		float: none;
+		overflow: hidden;
+	}
+	.block4-main article:first-child {
+		width: 95%;
+		margin: 0 2.5% -20px 2.5%;
+		float: none;
+	}
+
+}
+
+
+ @media screen and (max-width: 360px) {
+
+ }
